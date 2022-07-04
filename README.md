@@ -23,7 +23,7 @@ To view the SQL syntax for creating the database and populating the table;
         - cd into the project directory
 
             ```terminal
-            cd react-bookstore
+            cd VetClinic-Database.git
             ```
 
 - **Congrats!** you can now view the queries in your local computer.

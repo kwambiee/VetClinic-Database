@@ -1,41 +1,31 @@
-# Vet Clinic Database
+# curriculum-databases-projects-template
 
-> This repository contains a database that has postgresql syntax to create a table and populate the table with sample data. It also has queries that have been run on the animal database.
+> This template should be used for database related projects at Microverse.
+> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
 
-## Setup
 
--[schema.sql](./schema.sql) entails SQL syntax to create tables. -[data.sql](./data.sql) populates tables with sample data. -[queries.sql](./queries.sql) contained queries that have been run on the animal database.
+## Getting Started
 
-### Prerequisites
+This repository includes files with plain SQL that can be used to recreate a database:
 
-- Postgresql
+- Use [schema.sql](./schema.sql) to create all tables.
+- Use [data.sql](./data.sql) to populate tables with sample data.
+- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
-### Getting Started
-
-To view the SQL syntax for creating the database and populating the table;
-
-    a) Clone the project
-
-        ```terminal
-        git@github.com:kwambiee/VetClinic-Database.git
-        ```
-    b) View the folder
-        - cd into the project directory
-
-            ```terminal
-            cd VetClinic-Database.git
-            ```
-
-- **Congrats!** you can now view the queries in your local computer.
 
 ## Authors
 
-👤 **Joy Kwamboka**
+👤 **Author1**
 
-- Github: [@kwambiee](https://github.com/kwambiee)
-- Twitter: [@kwambiee](https://twitter.com/kwambiee)
-- Linkedin: [Joy Kwamboka](https://www.linkedin.com/in/joy-kwamboka)
-- E-mail: kwambokaj2.jk@gmail.com
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -51,4 +41,8 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc.
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

@@ -16,5 +16,5 @@ select COUNT(*) FROM animals;
 select Count(*) FROM animals WHERE escape_attempts=0;
 select AVG(weight_kg) FROM animals;
 select neutered, Count(neutered) as number_of_animals,SUM(escape_attempts) as escape_total FROM animals GROUP BY neutered;
-t_kg),MIN(weight_kg) FROM animals GROUP BY species;
+select species,MAX(weight_kg),MIN(weight_kg) FROM animals GROUP BY species;
 select species,AVG(escape_attempts) FROM animals WHERE date_of_birth > DATE '1990-01-01' AND date_of_birth < DATE'2000-01-01' GROUP BY species;

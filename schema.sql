@@ -34,3 +34,18 @@ CREATE TABLE vets(
     name TEXT,
     age INT,
     date_of_graduation DATE);
+
+CREATE TABLE specializations(
+    species_id INT,
+    vets_id INT);
+
+ALTER TABLE specializations ADD CONSTRAINT fk_specializations FOREIGN KEY(species_id) REFERENCES species(id);
+ALTER TABLE specializations ADD CONSTRAINT fk_vetspecialty FOREIGN KEY(vets_id) REFERENCES vets(id);
+
+CREATE TABLE visits(
+    animals_id INT,
+    vets_id INT);
+
+ALTER TABLE visits ADD CONSTRAINT fk_vetsID FOREIGN KEY(vets_id)REFERENCES vets(id);
+ALTER TABLE visits ADD CONSTRAINT fk_visits FOREIGN KEY(animals_id)REFERENCES animals(id);
+ALTER TABLE visits ADD COLUMN visit_dates DATE;

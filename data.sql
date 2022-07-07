@@ -24,6 +24,6 @@ UPDATE animals SET owner_id=5 WHERE name='Boarmon' OR name='Angemon';
 
 INSERT INTO vets(name,age,date_of_graduation) VALUES('Vet William Tatcher',45,DATE '2000-04-23'),('Vet Maisy Smith',26,DATE '2019-01-17'),('Vet Stephanie Mendez',64,DATE '1981-05-04'),('Vet Jack Harkness',38,DATE '2008-06-08');
 
-INSERT INTO specializations(species_id,vets_id)VALUES(1,1),(1,3),(2,3),(2,4);
+INSERT INTO specializations(species_id,vets_id)VALUES(2,1),(1,3),(2,3),(1,4);
 
 INSERT INTO visits(animals_id,vets_id,visit_dates) VALUES(2,1,DATE'2020-05-24'),(2,3,DATE'2020-07-22'),(3,4,DATE'2021-02-02'),(6,2, DATE'2020-01-05'),(6,2, DATE'2020-04-08'),(6,2,DATE'2020-05-14'),(4,3,DATE'2021-05-04'),(7,4, DATE'2021-02-24'),(8,2,DATE'2019-12-21'),(8,1,DATE'2020-08-10'),(8,2, DATE'2021-04-07'),(10,3, DATE'2019-09-29'),(9,4, DATE'2020-10-03'),(9,4,DATE'2020-11-04'),(5,2,DATE'2019-01-24'),(5,2, DATE'2019-05-15'),(5,2,DATE'2020-02-27'),(5,2,DATE'2020-08-03'),(1,3,DATE'2020-05-25'),(1,1,DATE'2021-11-01');

@@ -49,3 +49,5 @@ CREATE TABLE visits(
 ALTER TABLE visits ADD CONSTRAINT fk_vetsID FOREIGN KEY(vets_id)REFERENCES vets(id);
 ALTER TABLE visits ADD CONSTRAINT fk_visits FOREIGN KEY(animals_id)REFERENCES animals(id);
 ALTER TABLE visits ADD COLUMN visit_dates DATE;
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);

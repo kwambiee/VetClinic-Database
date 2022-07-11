@@ -36,3 +36,4 @@ INSERT INTO visits (animals_id, vets_id, date_of_visit) SELECT * FROM (SELECT id
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 
 INSERT INTO vetidentification(id,vets_id)VALUES(1,1),(2,2),(3,3),(4,4);
+INSERT INTO animalidentification(id,animals_id)VALUES(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(10,10),(11,11);

@@ -54,3 +54,6 @@ ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 CREATE TABLE vetidentification(id INT PRIMARY KEY,vets_id INT);
 ALTER TABLE visits ADD CONSTRAINT fk_identify FOREIGN KEY (vets_id) REFERENCES vetidentification(id);
+
+CREATE TABLE animalidentification(id INT PRIMARY KEY,animals_id INT);
+ALTER TABLE visits ADD CONSTRAINT fk_animidentify FOREIGN KEY (animals_id) REFERENCES animalidentification(id);

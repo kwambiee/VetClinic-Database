@@ -41,6 +41,10 @@ explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
 explain analyze SELECT * FROM visits where vets_id = 2;
 explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
 
--- Using ckustured index.
+
 explain analyze select visit_dates,animals_id from visits INNER JOIN vetidentification ON visits.vets_id=vetidentification.id WHERE vetidentification.id=2 LIMIT 100;
 explain analyze select visit_dates,animals_id from visits INNER JOIN vetidentification ON visits.vets_id=vetidentification.id WHERE vetidentification.id=2 LIMIT 1000;
+explain analyze select visit_dates from visits INNER JOIN animalidentification ON visits.vets_id=animalidentification.id WHERE EXISTS
+(SELECT animals_id FROM animalidentification WHERE animalidentification.id=4) LIMIT 50000;
+explain analyze select visit_dates from visits INNER JOIN animalidentification ON visits.vets_id=animalidentification.id WHERE EXISTS
+(SELECT animals_id FROM animalidentification WHERE animalidentification.id=4) LIMIT 100000;

@@ -50,5 +50,7 @@ ALTER TABLE visits ADD CONSTRAINT fk_vetsID FOREIGN KEY(vets_id)REFERENCES vets(
 ALTER TABLE visits ADD CONSTRAINT fk_visits FOREIGN KEY(animals_id)REFERENCES animals(id);
 ALTER TABLE visits ADD COLUMN visit_dates DATE;
 
-ALTER TABLE owners ADD COLUMN email VARCHAR(120);x
-ALTER TABLE visits ADD id SERIAL PRIMARY KEY;
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE TABLE vetidentification(id INT PRIMARY KEY,vets_id INT);
+ALTER TABLE visits ADD CONSTRAINT fk_identify FOREIGN KEY (vets_id) REFERENCES vetidentification(id);

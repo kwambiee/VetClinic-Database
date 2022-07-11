@@ -42,7 +42,5 @@ explain analyze SELECT * FROM visits where vets_id = 2;
 explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
 
 -- Using ckustured index.
-explain analyze SELECT * FROM visits WHERE id=5;
-explain analyze SELECT * FROM visits WHERE id=100;
-explain analyze SELECT * FROM visits WHERE id=300;
-
+explain analyze select visit_dates,animals_id from visits INNER JOIN vetidentification ON visits.vets_id=vetidentification.id WHERE vetidentification.id=2 LIMIT 100;
+explain analyze select visit_dates,animals_id from visits INNER JOIN vetidentification ON visits.vets_id=vetidentification.id WHERE vetidentification.id=2 LIMIT 1000;

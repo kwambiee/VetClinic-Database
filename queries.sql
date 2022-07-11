@@ -36,3 +36,14 @@ select vets.name as Vet, animals.name as animal,visits.visit_dates from animals 
 select vets.name as Vet, animals.name as animal,visits.visit_dates from animals JOIN visits ON visits.animals_id=animals.id INNER JOIN vets ON vets.id=visits.vets_id  ORDER BY visit_dates DESC LIMIT 1;
 select species.name as type,Count(visit_dates) FROM species JOIN specializations ON species.id=specializations.species_id INNER JOIN visits ON specializations.vets_id=visits.vets_id WHERE specializations.vets_id=1 AND species_id=2 OR specializations.vets_id=4 AND species_id=1 GROUP BY species.name;
 select species.name,Count(animals_id) FROM species JOIN specializations ON species.id=specializations.species_id INNER JOIN visits ON specializations.vets_id=visits.vets_id WHERE animals_id=5 OR animals_id=6 OR animals_id=8 GROUP BY species.name ORDER BY Count(animals_id) DESC LIMIT 1;
+
+explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
+explain analyze SELECT * FROM visits where vets_id = 2;
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+explain analyze select * from visits INNER JOIN animalidentification ON  visits.animals_id=animalidentification.id WHERE animalidentification.id=4 LIMIT 50000;
+
+explain analyze select visit_dates,animals_id from visits INNER JOIN vetidentification ON visits.vets_id=vetidentification.id WHERE vetidentification.id=2 LIMIT 1000;
+
+
+explain analyze SELECT full_name, email FROM owners where email = 'owner_18327@mail.com';

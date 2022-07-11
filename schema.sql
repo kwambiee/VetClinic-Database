@@ -57,3 +57,5 @@ ALTER TABLE visits ADD CONSTRAINT fk_identify FOREIGN KEY (vets_id) REFERENCES v
 
 CREATE TABLE animalidentification(id INT PRIMARY KEY,animals_id INT);
 ALTER TABLE visits ADD CONSTRAINT fk_animidentify FOREIGN KEY (animals_id) REFERENCES animalidentification(id);
+
+CREATE INDEX owners_email_asc ON owners(email ASC);

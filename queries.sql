@@ -48,3 +48,5 @@ explain analyze select visit_dates from visits INNER JOIN animalidentification O
 (SELECT animals_id FROM animalidentification WHERE animalidentification.id=4) LIMIT 50000;
 explain analyze select visit_dates from visits INNER JOIN animalidentification ON visits.vets_id=animalidentification.id WHERE EXISTS
 (SELECT animals_id FROM animalidentification WHERE animalidentification.id=4) LIMIT 100000;
+
+explain analyze SELECT full_name, email FROM owners where email = 'owner_18327@mail.com';
